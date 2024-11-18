@@ -1,0 +1,29 @@
+﻿@page
+@model CarRazor.Pages.GetAllCarsModel
+@{
+}
+
+<h1>Cars</h1>
+<table class="table table-striped">
+    <thead>
+<tr>
+    <th>RegNo</th>
+    <th>Brand</th>
+    <th>Model</th>
+    <th>Horsepower</th>
+    <th>Doors</th>
+</tr>
+    </thead>
+    <tbody>
+        @foreach (var car in Model.Cars)
+        {
+            <tr>
+                <td>@car.RegNo</td>
+                <td>@car.Brand</td>
+                <td>@car.Model</td>
+                <td>@car.HorsePower</td>
+                <td>@car.Doors</td>
+            </tr>
+        }   
+    </tbody>
+</table>
