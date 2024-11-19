@@ -15,5 +15,10 @@ namespace CarRazor.MockData
         {
            return _cars; 
         }
+
+        public static void AddCar(Car car)
+        {
+            _cars.Add(car);
+        }
     }
 }
