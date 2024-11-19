@@ -7,10 +7,19 @@ namespace CarRazor.Pages
 {
     public class GetAllCarsModel : PageModel
     {
+
         public List<Car> Cars { get; set; }
+
+        private Services.CarService _carService;
+
+
+        public GetAllCarsModel(Services.CarService carService)
+        {
+            _carService = carService;
+        }
         public void OnGet()
         {
-            Cars = MockCars.GetCars();
+            Cars = _carService.GetCars();
         }
     }
 }
